@@ -28,6 +28,11 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func galleryButtonPressed(_ sender: UIButton) {
+        loadPhoto()
+    }
+    
+    
     @IBAction func sliderPressed() {
         sliderDidChanged(value: intesitySlider.value)
         applyFilter(intensity: intesitySlider.value)
@@ -42,8 +47,29 @@ class ViewController: UIViewController {
         guard let outputImage = cifilter.outputImage else {return}
         guard let cgImage = ciContext.createCGImage(outputImage, from: outputImage.extent) else {return}
         myImage.image = UIImage(cgImage: cgImage)
-        
     }
     
-    
+    private func loadPhoto() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        present(picker, animated: true)
+
+    }
+}
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //1
+        guard let selectedImage = info[.originalImage] as? UIImage else { return }
+
+        //2
+        let ciImage = CIImage(image: selectedImage)
+        cifilter.setValue(ciImage, forKey: kCIInputImageKey)
+
+        //3
+        applyFilter(intensity: intesitySlider.value)
+
+        //4
+        dismiss(animated: true)
+
+    }
 }

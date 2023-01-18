@@ -18,19 +18,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gKU-KT-U34" userLabel="holder Stack">
-                                <rect key="frame" x="0.0" y="69" width="393" height="722.33333333333337"/>
+                                <rect key="frame" x="0.0" y="74" width="393" height="699.33333333333337"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="YSj-PN-NsA" userLabel="image pick Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCu-9K-ubH">
+                                                <rect key="frame" x="0.0" y="0.0" width="89.333333333333329" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-bh-QeI">
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="77.333333333333314" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
+                                                <connections>
+                                                    <action selector="galleryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Fi-9t-L3a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jxm-K5-4dB" userLabel="photo-slider Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="652.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="64.333333333333371" width="393" height="565"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageOne" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-sL-ci9">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="524"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="436.66666666666669"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="hZ0-sL-ci9" secondAttribute="height" multiplier="0.75" id="GwG-PS-Wz1"/>
+                                                    <constraint firstAttribute="width" secondItem="hZ0-sL-ci9" secondAttribute="height" multiplier="0.9" id="GwG-PS-Wz1"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7g-yo-ZyN">
-                                                <rect key="frame" x="0.0" y="554" width="393" height="98.333333333333371"/>
+                                                <rect key="frame" x="0.0" y="466.66666666666657" width="393" height="98.333333333333314"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qxr-9n-PCT" userLabel="Slider Stack">
                                                         <rect key="frame" x="8" y="0.0" width="377" height="98.333333333333329"/>
@@ -72,7 +91,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-YR-EZ5">
-                                        <rect key="frame" x="0.0" y="682.33333333333337" width="393" height="40"/>
+                                        <rect key="frame" x="0.0" y="659.33333333333337" width="393" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-Tg-bgr">
                                                 <rect key="frame" x="71.666666666666686" y="0.0" width="250" height="40"/>
@@ -98,7 +117,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gKU-KT-U34" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0tZ-Ku-EoO"/>
-                            <constraint firstItem="gKU-KT-U34" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NMa-65-bIu"/>
+                            <constraint firstItem="gKU-KT-U34" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="NMa-65-bIu"/>
                             <constraint firstItem="gKU-KT-U34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="foy-O0-OaA"/>
                         </constraints>
                     </view>
@@ -111,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49.618320610687022" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-127" y="-106"/>
         </scene>
     </scenes>
     <resources>
