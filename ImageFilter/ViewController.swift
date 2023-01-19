@@ -35,11 +35,12 @@ class ViewController: UIViewController {
     
     @IBAction func sliderPressed() {
         sliderDidChanged(value: intesitySlider.value)
-        applyFilter(intensity: intesitySlider.value)
     }
     
     private func sliderDidChanged(value: Float) {
         intesityLabel.text = String(format: "%.2f", value)
+        applyFilter(intensity: intesitySlider.value)
+
     }
     
     func applyFilter(intensity: Float) {
@@ -56,8 +57,10 @@ class ViewController: UIViewController {
 
     }
 }
+
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         //1
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
 
@@ -66,7 +69,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         cifilter.setValue(ciImage, forKey: kCIInputImageKey)
 
         //3
-        applyFilter(intensity: intesitySlider.value)
+        intesitySlider.value = 0.0
+        sliderDidChanged(value: 0.0)
 
         //4
         dismiss(animated: true)
