@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var intesityLabel: UILabel!
     @IBOutlet weak var intesitySlider: UISlider!
     let ciContext = CIContext(options: nil)
-    let cifilter = CIFilter(name: "CISepiaTone")!
-    
+    var cifilter = CIFilter(name: "CISepiaTone")!
+    let corefilters = CoreFilters()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,6 @@ class ViewController: UIViewController {
     
     private func sliderDidChanged(value: Float) {
         intesityLabel.text = String(format: "%.2f", value)
-        applyFilter(intensity: intesitySlider.value)
-
     }
     
     func applyFilter(intensity: Float) {
@@ -54,7 +52,50 @@ class ViewController: UIViewController {
         let picker = UIImagePickerController()
         picker.delegate = self
         present(picker, animated: true)
-
+    }
+    
+    
+    // Filters Button
+    
+    @IBAction func invertButtonPressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.Invert)!
+    }
+    
+    
+    @IBAction func mapPressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.map)!
+    }
+    
+    @IBAction func posterizePressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.Posterize)!
+    }
+    
+    
+    @IBAction func falseColorPressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.FalseColor)!
+    }
+    
+    
+    @IBAction func fadePressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.fade)!
+    }
+    
+    
+    @IBAction func monoPressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.Mono)!
+    }
+    
+    
+    @IBAction func chromeEffectPressed(_ sender: UIButton) {
+        cifilter = CIFilter(name: corefilters.ChromeEffect)!
+    }
+    
+    @IBAction func noirPressed(_ sender: Any) {
+        cifilter = CIFilter(name: corefilters.Noir)!
+    }
+    
+    @IBAction func applyPressed(_ sender: UIButton) {
+        applyFilter(intensity: intesitySlider.value)
     }
 }
 
