@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         present(picker, animated: true)
     }
     
-    
     // Filters Button
     @IBAction func filterPressed(_ sender: UIButton) {
         let filterName = CoreFilters.filterByTag(tag: sender.tag)
