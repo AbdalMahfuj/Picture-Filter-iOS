@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var cifilter = CIFilter(name: "CISepiaTone")!
     let corefilters = CoreFilters()
     
+    @IBOutlet weak var filerSelected: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,8 +43,8 @@ class ViewController: UIViewController {
         intesityLabel.text = String(format: "%.2f", value)
     }
     
-    func applyFilter(intensity: Float) {
-        cifilter.setValue(intensity, forKey: kCIInputIntensityKey)
+    func applyFilter() {
+        //cifilter.setValue(intensity, forKey: kCIInputIntensityKey)
         guard let outputImage = cifilter.outputImage else {return}
         guard let cgImage = ciContext.createCGImage(outputImage, from: outputImage.extent) else {return}
         myImage.image = UIImage(cgImage: cgImage)
@@ -56,46 +58,14 @@ class ViewController: UIViewController {
     
     
     // Filters Button
-    
-    @IBAction func invertButtonPressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.Invert)!
+    @IBAction func filterPressed(_ sender: UIButton) {
+        let filterName = CoreFilters.filterByTag(tag: sender.tag)
+        cifilter = CIFilter(name: filterName)!
+        filerSelected.text = "Selected: \(filterName)"
     }
     
-    
-    @IBAction func mapPressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.map)!
-    }
-    
-    @IBAction func posterizePressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.Posterize)!
-    }
-    
-    
-    @IBAction func falseColorPressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.FalseColor)!
-    }
-    
-    
-    @IBAction func fadePressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.fade)!
-    }
-    
-    
-    @IBAction func monoPressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.Mono)!
-    }
-    
-    
-    @IBAction func chromeEffectPressed(_ sender: UIButton) {
-        cifilter = CIFilter(name: corefilters.ChromeEffect)!
-    }
-    
-    @IBAction func noirPressed(_ sender: Any) {
-        cifilter = CIFilter(name: corefilters.Noir)!
-    }
-    
-    @IBAction func applyPressed(_ sender: UIButton) {
-        applyFilter(intensity: intesitySlider.value)
+    @IBAction func applyDidPressed(_ sender: UIButton) {
+        applyFilter()
     }
 }
 
@@ -104,7 +74,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         //1
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
-
+        myImage.image = selectedImage
         //2
         let ciImage = CIImage(image: selectedImage)
         cifilter.setValue(ciImage, forKey: kCIInputImageKey)

@@ -9,15 +9,36 @@ import Foundation
 
 
 struct CoreFilters {
-    let Invert = "CIColorInvert"
-    let map = "CIColorMap"
-    let Posterize = "CIColorPosterize"
-    let FalseColor = "CIFalseColor"
-    let ChromeEffect = "CIPhotoEffectChrome"
+    static let ZoomBlur = "CIZoomBlur"
+    static let ColorClamp = "CIColorClamp"
+    static let HueAdjust = "CIHueAdjust"
+    static let ToneCurve = "CIToneCurve"
+    static let Noir = "CIPhotoEffectNoir"
+    static let cepia = "CISepiaTone"
+    static let Vignette = "CIVignette"
+    static let Mono = "CIPhotoEffectMono"
     
-    
-    let fade = "CIPhotoEffectFade"
-    let instant = "CIPhotoEffectInstant"
-    let Mono = "CIPhotoEffectMono"
-    let Noir = "CIPhotoEffectNoir"
+    static func filterByTag(tag: Int) -> String { // type level function
+        switch tag {
+        case 1:
+            return ZoomBlur
+        case 2:
+            return ColorClamp
+        case 3:
+            return HueAdjust
+        case 4:
+            return ToneCurve
+        case 5:
+            return Noir
+        case 6:
+            return cepia
+        case 7:
+            return Vignette
+        case 8:
+            return Mono
+        default:
+            return ""
+        }
+    }
 }
+

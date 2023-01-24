@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gKU-KT-U34" userLabel="holder Stack">
-                                <rect key="frame" x="0.0" y="74" width="373.66666666666669" height="677"/>
+                                <rect key="frame" x="0.0" y="74" width="400" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="YSj-PN-NsA" userLabel="image pick Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCu-9K-ubH">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.333333333333329" height="34.333333333333336"/>
@@ -30,7 +30,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-bh-QeI">
-                                                <rect key="frame" x="296.33333333333331" y="0.0" width="77.333333333333314" height="34.333333333333336"/>
+                                                <rect key="frame" x="322.66666666666669" y="0.0" width="77.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
                                                 <connections>
@@ -40,32 +40,32 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jxm-K5-4dB" userLabel="photo-slider Stack">
-                                        <rect key="frame" x="0.0" y="64.333333333333343" width="373.66666666666669" height="428.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="64.333333333333343" width="400" height="428.33333333333326"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageOne" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-sL-ci9">
-                                                <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="400" id="SqY-sr-wHG"/>
                                                     <constraint firstAttribute="height" constant="300" id="h0D-aT-Bev"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7g-yo-ZyN">
-                                                <rect key="frame" x="0.0" y="330" width="373.66666666666669" height="98.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="330" width="400" height="98.333333333333314"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qxr-9n-PCT" userLabel="Slider Stack">
-                                                        <rect key="frame" x="8" y="0.0" width="357.66666666666669" height="98.333333333333329"/>
+                                                        <rect key="frame" x="8" y="0.0" width="384" height="98.333333333333329"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf0-Eu-3x9" userLabel="label Stack">
-                                                                <rect key="frame" x="0.0" y="0.0" width="357.66666666666669" height="20.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="20.333333333333332"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Intensity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oho-Fw-K9P" userLabel="Intesity">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="315.66666666666669" height="20.333333333333332"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="20.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jl-Lo-39o">
-                                                                        <rect key="frame" x="315.66666666666669" y="0.0" width="42" height="20.333333333333332"/>
+                                                                        <rect key="frame" x="342" y="0.0" width="42" height="20.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hNX-Fp-MyM">
-                                                                <rect key="frame" x="-2" y="20.333333333333371" width="361.66666666666669" height="79"/>
+                                                                <rect key="frame" x="-2" y="20.333333333333371" width="388" height="79"/>
                                                                 <connections>
                                                                     <action selector="sliderPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7DN-tx-cB2"/>
                                                                 </connections>
@@ -92,100 +92,93 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-5k-HcE" userLabel="Filter Stack">
-                                        <rect key="frame" x="0.0" y="522.66666666666663" width="373.66666666666669" height="154.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="522.66666666666663" width="400" height="150.33333333333337"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HmS-lS-fIC" userLabel="Filter Stack2">
-                                                <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="34.333333333333336"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HmS-lS-fIC" userLabel="Filter Stack2">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-c3-plh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Fade"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-c3-plh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="ZoomBlur"/>
                                                         <connections>
-                                                            <action selector="fadePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJc-CS-UGw"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fq9-gc-IXZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-Xu-cBp">
-                                                        <rect key="frame" x="81" y="0.0" width="67.333333333333314" height="34.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Mono"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-Xu-cBp">
+                                                        <rect key="frame" x="103" y="0.0" width="91" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="ColorClamp"/>
                                                         <connections>
-                                                            <action selector="monoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZe-3b-q2N"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Brj-p8-RT3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCR-Bj-XQk">
-                                                        <rect key="frame" x="168.33333333333337" y="0.0" width="129.66666666666663" height="34.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="ChromeEffect"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCR-Bj-XQk">
+                                                        <rect key="frame" x="206" y="0.0" width="91" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="HueAdjust"/>
                                                         <connections>
-                                                            <action selector="chromeEffectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7c-jz-lRB"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DpV-Zm-kdC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0O-dq-TDG">
-                                                        <rect key="frame" x="318" y="0.0" width="55.666666666666686" height="34.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Noir"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0O-dq-TDG">
+                                                        <rect key="frame" x="309" y="0.0" width="91" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="ToneCurve"/>
                                                         <connections>
-                                                            <action selector="noirPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m43-rI-VFT"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Si-wI-rHT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-mN-n9t" userLabel="Filter Stack1">
-                                                <rect key="frame" x="0.0" y="44.333333333333371" width="373.66666666666669" height="60"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-mN-n9t" userLabel="Filter Stack1">
+                                                <rect key="frame" x="0.0" y="40" width="400" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-kK-FpY" userLabel="Invert">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="bhL-zS-5PM"/>
-                                                            <constraint firstAttribute="height" constant="60" id="rlP-uK-1Ik"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Invert"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-kK-FpY" userLabel="Invert">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Noir"/>
                                                         <connections>
-                                                            <action selector="invertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ds-BL-OeN"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWJ-Dq-yfZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-ac-fjx" userLabel="map">
-                                                        <rect key="frame" x="82" y="0.0" width="58" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="58" id="a4B-Fx-oKR"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-ac-fjx" userLabel="map">
+                                                        <rect key="frame" x="72" y="0.0" width="95.666666666666686" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Cepia"/>
                                                         <connections>
-                                                            <action selector="mapPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jo-EL-Frm"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GfH-27-266"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-tJ-9CN" userLabel="Posterize">
-                                                        <rect key="frame" x="152" y="0.0" width="95" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="95" id="jAT-fa-73D"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Posterize"/>
+                                                    <button opaque="NO" alpha="0.94999999999999996" tag="7" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-tJ-9CN" userLabel="Posterize">
+                                                        <rect key="frame" x="167.66666666666666" y="0.0" width="138.99999999999997" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Vignette"/>
                                                         <connections>
-                                                            <action selector="posterizePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQl-Nu-8kw"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRZ-4c-rRy"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGh-pM-JGk">
-                                                        <rect key="frame" x="259" y="0.0" width="114.66666666666669" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="110" id="96J-GW-Bn9"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="FalseColor"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGh-pM-JGk">
+                                                        <rect key="frame" x="306.66666666666669" y="0.0" width="93.333333333333314" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Mono"/>
                                                         <connections>
-                                                            <action selector="falseColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lvp-uo-zYu"/>
+                                                            <action selector="filterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9f-9F-ujU"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X7-j7-D6E">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-YR-EZ5" userLabel="Button Stack">
-                                                <rect key="frame" x="0.0" y="114.33333333333337" width="373.66666666666669" height="40"/>
+                                                <rect key="frame" x="0.0" y="110.33333333333337" width="400" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-Tg-bgr">
-                                                        <rect key="frame" x="62" y="0.0" width="250" height="40"/>
+                                                        <rect key="frame" x="75" y="0.0" width="250" height="40"/>
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="250" id="LFK-GU-zNB"/>
@@ -196,16 +189,12 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="applyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXq-I6-Y3N"/>
+                                                            <action selector="applyDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSA-Z1-W3s"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="zIr-mN-n9t" firstAttribute="leading" secondItem="eTh-5k-HcE" secondAttribute="leading" constant="5" id="G5p-k6-Nyo"/>
-                                            <constraint firstAttribute="trailing" secondItem="zIr-mN-n9t" secondAttribute="trailing" constant="5" id="uxT-r5-HJD"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -213,13 +202,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gKU-KT-U34" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0tZ-Ku-EoO"/>
                             <constraint firstItem="gKU-KT-U34" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="NMa-65-bIu"/>
                             <constraint firstItem="gKU-KT-U34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="foy-O0-OaA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="applyButton" destination="PtB-Tg-bgr" id="Hhd-5I-nbc"/>
+                        <outlet property="filerSelected" destination="1X7-j7-D6E" id="Qpz-0g-6ig"/>
                         <outlet property="intesityLabel" destination="5Jl-Lo-39o" id="o8N-gq-Q1h"/>
                         <outlet property="intesitySlider" destination="hNX-Fp-MyM" id="4s0-d3-hxx"/>
                         <outlet property="myImage" destination="hZ0-sL-ci9" id="ef2-SD-KHx"/>
@@ -227,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-160" y="-394"/>
+            <point key="canvasLocation" x="-482" y="-513"/>
         </scene>
     </scenes>
     <resources>
