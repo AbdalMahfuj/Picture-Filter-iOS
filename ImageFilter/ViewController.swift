@@ -13,20 +13,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var applyButton: UIButton!
     @IBOutlet weak var intesityLabel: UILabel!
     @IBOutlet weak var intesitySlider: UISlider!
+    @IBOutlet weak var filerSelected: UILabel!
+    
+    @IBOutlet weak var filerStackView1: UIStackView!
+    @IBOutlet weak var filerStackView2: UIStackView!
+
+
     let ciContext = CIContext(options: nil)
     var cifilter = CIFilter(name: "CISepiaTone")!
     let corefilters = CoreFilters()
     
-    @IBOutlet weak var filerSelected: UILabel!
+    private var surceImage: UIImage?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let uiImage = UIImage(named: "imageOne") else { return }
-        let ciImage = CIImage(image: uiImage)
-        cifilter.setValue(ciImage, forKey: kCIInputImageKey)
+        surceImage = UIImage(named: "imageOne")
         intesitySlider.value = 0.0
         sliderDidChanged(value: 0.0)
+//        applyFilter()
     }
 
     
@@ -44,6 +50,10 @@ class ViewController: UIViewController {
     }
     
     func applyFilter() {
+        guard let surceImage else { return }
+        let ciImage = CIImage(image: surceImage)
+        cifilter.setValue(ciImage, forKey: kCIInputImageKey)
+
         //cifilter.setValue(intensity, forKey: kCIInputIntensityKey)
         guard let outputImage = cifilter.outputImage else {return}
         guard let cgImage = ciContext.createCGImage(outputImage, from: outputImage.extent) else {return}
@@ -61,6 +71,14 @@ class ViewController: UIViewController {
         let filterName = CoreFilters.filterByTag(tag: sender.tag)
         cifilter = CIFilter(name: filterName)!
         filerSelected.text = "Selected: \(filterName)"
+        
+        let buttons = filerStackView1.subviews + filerStackView2.subviews
+        
+        for btn in buttons {
+            if btn is UIButton {
+                btn.backgroundColor = (btn as! UIButton) == sender ? .red : .link
+            }
+        }
     }
     
     @IBAction func applyDidPressed(_ sender: UIButton) {
@@ -74,22 +92,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        //1
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
-        myImage.image = selectedImage
-        //2
-        let ciImage = CIImage(image: selectedImage)
-        
-        cifilter.setValue(ciImage, forKey: kCIInputImageKey)
+        surceImage = selectedImage
+        myImage.image = surceImage
 
-        //3
         intesitySlider.value = 0.0
         sliderDidChanged(value: 0.0)
 
-        //4
         dismiss(animated: true)
-
     }
 }
