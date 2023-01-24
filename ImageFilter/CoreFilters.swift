@@ -23,17 +23,17 @@ struct CoreFilters {
         case 1:
             return "CIZoomBlur"
         case 2:
-            return "CIColorClamp"
+            return "CIPhotoEffectChrome"
         case 3:
-            return "CIHueAdjust"
+            return "CIColorPosterize"
         case 4:
-            return "CIToneCurve"
+            return "CIColorInvert"
         case 5:
             return "CIPhotoEffectNoir"
         case 6:
             return "CISepiaTone"
         case 7:
-            return "CIVignette"
+            return "CIPhotoEffectTransfer"
         case 8:
             return "CIPhotoEffectMono"
         default:

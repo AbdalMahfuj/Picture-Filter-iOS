@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         surceImage = UIImage(named: "imageOne")
         intesitySlider.value = 0.0
         sliderDidChanged(value: 0.0)
-//        applyFilter()
     }
 
     
@@ -85,10 +84,19 @@ class ViewController: UIViewController {
         applyFilter()
     }
     
-    
     @IBAction func clearPressed(_ sender: UIButton) {
+        myImage.image = surceImage
+        let buttons = filerStackView1.subviews + filerStackView2.subviews
         
+        for btn in buttons {
+            if btn is UIButton {
+                btn.backgroundColor = .link
+            }
+        }
+        filerSelected.text = "Select One"
     }
+    
+    
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
