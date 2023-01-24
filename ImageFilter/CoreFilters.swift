@@ -9,33 +9,33 @@ import Foundation
 
 
 struct CoreFilters {
-    static let ZoomBlur = "CIZoomBlur"
-    static let ColorClamp = "CIColorClamp"
-    static let HueAdjust = "CIHueAdjust"
-    static let ToneCurve = "CIToneCurve"
-    static let Noir = "CIPhotoEffectNoir"
-    static let cepia = "CISepiaTone"
-    static let Vignette = "CIVignette"
-    static let Mono = "CIPhotoEffectMono"
+//    static let ZoomBlur = "CIZoomBlur"
+//    static let ColorClamp = "CIColorClamp"
+//    static let HueAdjust = "CIHueAdjust"
+//    static let ToneCurve = "CIToneCurve"
+//    static let Noir = "CIPhotoEffectNoir"
+//    static let cepia = "CISepiaTone"
+//    static let Vignette = "CIVignette"
+//    static let Mono = "CIPhotoEffectMono"
     
     static func filterByTag(tag: Int) -> String { // type level function
         switch tag {
         case 1:
-            return ZoomBlur
+            return "CIZoomBlur"
         case 2:
-            return ColorClamp
+            return "CIColorClamp"
         case 3:
-            return HueAdjust
+            return "CIHueAdjust"
         case 4:
-            return ToneCurve
+            return "CIToneCurve"
         case 5:
-            return Noir
+            return "CIPhotoEffectNoir"
         case 6:
-            return cepia
+            return "CISepiaTone"
         case 7:
-            return Vignette
+            return "CIVignette"
         case 8:
-            return Mono
+            return "CIPhotoEffectMono"
         default:
             return ""
         }

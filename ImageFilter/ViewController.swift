@@ -66,16 +66,22 @@ class ViewController: UIViewController {
     @IBAction func applyDidPressed(_ sender: UIButton) {
         applyFilter()
     }
+    
+    
+    @IBAction func clearPressed(_ sender: UIButton) {
+        
+    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         //1
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
         myImage.image = selectedImage
         //2
         let ciImage = CIImage(image: selectedImage)
+        
         cifilter.setValue(ciImage, forKey: kCIInputImageKey)
 
         //3
